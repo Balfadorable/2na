@@ -95,9 +95,6 @@ font-family: 'Montserrat', sans-serif; */
   width:90%;
   z-index: 1;
 }
-.iphone:hover{
-
-}
 .tuna-peak{
   position:absolute;
   top: 50px;
@@ -118,6 +115,15 @@ font-family: 'Montserrat', sans-serif; */
       margin-left:-10;
     }
 }
+@keyframes peak-mobile {
+    from{
+      margin-left:-70px;
+    }
+    to{
+      margin-left:0;
+    }
+}
+
 .navbar{
   font-weight: 400;
   text-decoration: none;
@@ -183,3 +189,28 @@ font-family: 'Montserrat', sans-serif; */
  .footer-btn{
    padding: 1px 20px 1px;
  }
+
+@media (max-width:767px){
+  .child{
+    position:static;
+  }
+}
+@media (max-width:630px){
+  #features{
+    z-index: 0;
+    position:relative;
+    bottom:0;
+  }
+  h2{font-size: 2rem;}
+  .tuna-peak{
+    width:23%;
+    left:80px;
+    animation-name: peak-mobile;
+  }
+  .dwnldbtn{
+    width: 60%;
+    margin: 10px 0 10px;
+    font-size: 1rem;
+  }
+
+}
